@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sufyan Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <h1>Weather</h1>
+      </div>
+
+      <form id="searchForm" class="search" autocomplete="off">
+        <input id="searchInput" type="text" placeholder="Search city (e.g., São Paulo)" aria-label="Search city" />
+        <button type="submit">Add</button>
+        <button id="locBtn" type="button" class="ghost">Use my location</button>
+      </form>
+    </header>
+
+    <section class="meta">
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <div class="grid" id="cards"></div>
+    </section>
+
+    
+  </main>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="three-bg.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
